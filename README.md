@@ -52,13 +52,6 @@ Cyber Security, Ethical Hacking, Safe File Downloads, Educational Tool, Cyber Aw
 
 ---
 
-## 📢 License
-
-MIT License © 2026 HasnainDarkNet  
-
-Permission is granted to use this software for **educational purposes only**. Any commercial or malicious use is strictly prohibited.  
-
----
 
 ## 🤝 Connect with Me
 
