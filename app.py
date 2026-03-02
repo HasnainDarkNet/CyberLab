@@ -43,6 +43,48 @@ selected_file_path = None
 def select_file():
     global selected_file_path
     print("\n===== CYBERLAB FILE SELECTOR =====\n")
+    try:
+        path = input("Enter full path of your file to make downloadable: ").strip()
+        if os.path.exists(path) and os.path.isfile(path):
+            selected_file_path = path
+            print(f"\n✅ File selected: {selected_file_path}\n")
+            print("Open your browser and visit http://127.0.0.1:5000 to download the file.\n")
+            return True
+        else:
+            print("\n❌ File not found or invalid path!")
+            return False
+    except KeyboardInterrupt:
+        print("\n❌ User canceled.")
+        sys.exit()
+
+# ================= Routes =================
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/download")
+def download():
+    global selected_file_path
+    if selected_file_path:
+        filename = os.path.basename(selected_file_path)
+        # Serve file ONLY for browser download
+        return send_file(selected_file_path, as_attachment=True, download_name=filename)
+    return "❌ No file selected! Go back to terminal and select a file first."
+
+# ================= Run =================
+if __name__ == "__main__":
+    cyberlab_banner()
+    if select_file():
+        # Disable Flask debug mode for safe local use
+        app.run(host="0.0.0.0", port=5000)
+# ================= Initialize Flask =================
+app = Flask(__name__)
+selected_file_path = None
+
+# ================= Terminal File Selector =================
+def select_file():
+    global selected_file_path
+    print("\n===== CYBERLAB FILE SELECTOR =====\n")
     path = input("Enter full path of your file to make downloadable: ").strip()
 
     if os.path.exists(path) and os.path.isfile(path):
