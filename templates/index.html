@@ -1,40 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hasnain Dark Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLab - Safe File Download</title>
+    <style>
+        /* ================= Base Styles ================= */
+        body {
+            background: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
-body {margin:0;padding:0;background:black;color:#00ff00;font-family:"Courier New", monospace;text-align:center;}
-.terminal {padding-top:50px;}
-h1 {font-size:40px;text-shadow:0 0 10px #00ff00;}
-p {font-size:18px;color:#00cc00;}
-.os-section {display:inline-block;margin:20px;text-align:center;transition:transform 0.3s;}
-.os-section:hover {transform:scale(1.1);}
-.os-icon {width:80px;height:80px;}
-.btn {margin-top:10px;padding:10px 20px;background:black;border:2px solid #00ff00;color:#00ff00;cursor:pointer;font-size:16px;}
-.btn:hover {background:#00ff00;color:black;}
-.download-instructions {margin-top:30px;font-size:16px;color:#00ff00;border-top:1px solid #00ff00;padding-top:15px;width:80%;margin-left:auto;margin-right:auto;}
-footer {margin-top:50px;padding:20px;border-top:1px solid #00ff00;font-size:14px;}
-</style>
+        h1 {
+            font-size: 3em;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* ================= OS Sections ================= */
+        .os-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .os-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0a0a0a;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 15px;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .os-section:hover {
+            transform: scale(1.05);
+        }
+
+        .os-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: black;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #00ff00;
+            color: black;
+        }
+
+        /* ================= Download Instructions ================= */
+        .download-instructions {
+            margin: 30px auto;
+            font-size: 1em;
+            color: #00ff00;
+            border-top: 1px solid #00ff00;
+            padding-top: 15px;
+            width: 90%;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        .download-instructions ol {
+            padding-left: 20px;
+        }
+
+        /* ================= Responsive Media Queries ================= */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            p { font-size: 1em; }
+            .os-section { width: 120px; padding: 10px; }
+            .os-icon { width: 60px; height: 60px; }
+            .btn { font-size: 14px; padding: 8px 12px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+            p { font-size: 0.9em; }
+            .os-section { width: 100px; padding: 8px; }
+            .os-icon { width: 50px; height: 50px; }
+            .btn { font-size: 12px; padding: 6px 10px; }
+        }
+    </style>
 </head>
 <body>
+    <h1>CYBERLAB</h1>
+    <p>Learn Safe File Handling & Cyber Awareness</p>
 
-<div class="terminal">
-<h1>HASNAIN DARK NET</h1>
-<p>Ethical Hacking | Cyber Security | Python Tools</p>
+    <div class="os-container">
+        <div class="os-section">
+            <img src="https://img.icons8.com/color/96/windows-10.png" class="os-icon" />
+            <div>Windows</div>
+            <a href="/download"><button class="btn">Download</button></a>
+        </div>
 
-<div class="os-section">
-    <img src="https://img.icons8.com/color/96/windows-10.png" class="os-icon"/>
-    <div>Windows</div>
-    <a href="/download"><button class="btn">Download</button></a>
-</div>
+        <div class="os-section">
+            <img src="https://img.icons8.com/color/96/mac-os.png" class="os-icon" />
+            <div>Mac OS</div>
+            <a href="/download"><button class="btn">Download</button></a>
+        </div>
 
-<div class="os-section">
-    <img src="https://img.icons8.com/color/96/mac-os.png" class="os-icon"/>
-    <div>Mac OS</div>
-    <a href="/download"><button class="btn">Download</button></a>
-</div>
+        <div class="os-section">
+            <img src="https://img.icons8.com/color/96/linux.png" class="os-icon" />
+            <div>Kali Linux</div>
+            <a href="/download"><button class="btn">Download</button></a>
+        </div>
+    </div>
 
+    <div class="download-instructions">
+        <h3>How to Download</h3>
+        <ol>
+            <li>Click on your operating system above.</li>
+            <li>File will be downloaded to your computer.</li>
+            <li>Run the file in a safe environment (testing purposes only).</li>
+            <li>Do not run unknown files on your main system.</li>
+        </ol>
+    </div>
+</body>
+    </html>
 <div class="os-section">
     <img src="https://img.icons8.com/color/96/linux.png" class="os-icon"/>
     <div>Kali Linux</div>
